@@ -3,6 +3,7 @@ import 'package:ecommerce_app/utils/app_styles.dart';
 import 'package:ecommerce_app/widgets/thick_container.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
@@ -14,7 +15,7 @@ class TicketView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return SizedBox(
       width: size.width * 0.9, //ticket uses 0.9% of the screen
-      height: AppLayout.getHeight(200),
+      height: AppLayout.getHeight(GetPlatform.isAndroid==true?162:169),
       child: Container(
         margin: EdgeInsets.only(right: AppLayout.getWidth(16)),
         child: Column(
@@ -183,9 +184,9 @@ class TicketView extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   color: isColor==null? Styles.orangeColor: Colors.white,
-                  borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(21),
-                      bottomRight: Radius.circular(21))),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(isColor==null?21:0),
+                      bottomRight: Radius.circular(isColor==null?21:0))),
               padding: const EdgeInsets.only(
                   left: 16, top: 10, right: 16, bottom: 16),
               child: Column(
