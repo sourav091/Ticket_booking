@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/screens/home_screen.dart';
+import 'package:ecommerce_app/screens/profile_screen.dart';
 import 'package:ecommerce_app/screens/search_screen.dart';
 import 'package:ecommerce_app/screens/ticket_screeen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -17,7 +18,7 @@ class _BottomBarState extends State<BottomBar> {
    const  HomeScreen(),
     const SearchScreen(),
     const TicketScreen(),
-    const Text("Profile")
+    const ProfileScreen()
   ];
 
   void _onItemTapped(int index) {

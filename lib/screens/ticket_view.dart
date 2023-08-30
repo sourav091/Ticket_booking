@@ -26,12 +26,12 @@ class TicketView extends StatelessWidget {
             /*
             showing the blue part of the ticket
             */
-            Container(
+        Container(
               decoration: BoxDecoration(
-                  color: isColor==null? Color(0xFF526799):Colors.white,
+                  color: isColor==null? const Color(0xFF526799):Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(AppLayout.getHeight(21)),
-                      topRight: Radius.circular(21))),
+                      topRight: const Radius.circular(21))),
               padding: EdgeInsets.all(AppLayout.getHeight(16)),
               child: Column(
                 children: [
@@ -56,7 +56,7 @@ class TicketView extends StatelessWidget {
                               angle: 1.5,
                               child: Icon(
                                 Icons.local_airport_rounded,
-                                color: isColor==null? Colors.white: Color(0xFF8ACCF7)
+                                color: isColor==null? Colors.white: const Color(0xFF8ACCF7)
                               ),
                             ),
                           ),
@@ -173,9 +173,9 @@ class TicketView extends StatelessWidget {
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        AppColumnLayout(firstText: ticket['date'], secondText: "Date", alignment: CrossAxisAlignment.start, isColor: false,),
-                        AppColumnLayout(firstText: ticket['departure_time'], secondText: "Departure Time", alignment: CrossAxisAlignment.center, isColor: false,),
-                        AppColumnLayout(firstText: ticket['number'].toString(), secondText: "Number", alignment: CrossAxisAlignment.end, isColor: false,),  
+                        AppColumnLayout(firstText: ticket['date'], secondText: "Date", alignment: CrossAxisAlignment.start, isColor: isColor,),
+                        AppColumnLayout(firstText: ticket['departure_time'], secondText: "Departure Time", alignment: CrossAxisAlignment.center, isColor: isColor,),
+                        AppColumnLayout(firstText: ticket['number'].toString(), secondText: "Number", alignment: CrossAxisAlignment.end, isColor: isColor),  
                     ],
                   )
                 ],
