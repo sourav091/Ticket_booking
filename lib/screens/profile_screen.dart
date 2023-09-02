@@ -72,7 +72,7 @@ class ProfileScreen extends StatelessWidget {
                           ),
                         ),
                         Gap(AppLayout.getHeight(5)),
-                        Text("Premium Status",
+                        const Text("Premium Status",
                             style: TextStyle(
                                 color: Color(0xFF526799),
                                 fontWeight: FontWeight.w600)),
@@ -164,6 +164,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(25)),
           Text("Accumulated Miles", style: Styles.headLineStyle2,),
+          Gap(AppLayout.getHeight(20)),
           Container(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
@@ -252,6 +253,19 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 )
               ],
+            ),
+          ),
+          Gap(AppLayout.getHeight(25)),
+          InkWell(
+            onTap: () => print("You are tapped"),
+            child: Center(
+              child: Text(
+                "How to get more miles",
+                style: Styles.textStyle.copyWith(
+                  color: Styles.primaryColor,
+                  fontWeight: FontWeight.w500
+                ),
+              ),
             ),
           )
         ],

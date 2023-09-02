@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: primary,
       ),
+      // darkTheme: ThemeData.dark(), // standard dark theme
+      // themeMode: ThemeMode.system,
       home: const BottomBar(),
     );
   }
