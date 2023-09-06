@@ -14,7 +14,6 @@ class TicketScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: Stack(children: [
@@ -87,7 +86,7 @@ class TicketScreen extends StatelessWidget {
                               Text("*** 2462", style: Styles.headLineStyle3,)
                             ],
                           ),
-                          Gap(5),
+                          const Gap(5),
                           Text("Payment Method", style: Styles.headLineStyle4,)
                         ],
                       ),
@@ -143,7 +142,7 @@ class TicketScreen extends StatelessWidget {
           left: AppLayout.getHeight(22),
           top: AppLayout.getHeight(295),
           child: Container(
-            padding: EdgeInsets.all(3),
+            padding: const EdgeInsets.all(3),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(color: Styles.textColor, width: 2)
