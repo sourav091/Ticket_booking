@@ -87,7 +87,7 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   InkWell(
                     onTap: () {
-                      print("You are tapped");
+                      debugPrint("You are tapped");
                     },
                     child: Text(
                       "Edit",
@@ -121,7 +121,7 @@ class ProfileScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                   shape: BoxShape.circle,
-                  border: Border.all(width: 18, color: Color(0xFF264CD2))
+                  border: Border.all(width: 18, color:  const Color(0xFF264CD2))
                 ),
               )
               ),
@@ -132,10 +132,10 @@ class ProfileScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CircleAvatar(
-                      child: Icon(FluentSystemIcons.ic_fluent_lightbulb_filament_filled,
-                      color: Styles.primaryColor, size: 27,),
                       maxRadius: 25,
                       backgroundColor: Colors.white,
+                      child: Icon(FluentSystemIcons.ic_fluent_lightbulb_filament_filled,
+                      color: Styles.primaryColor, size: 27,),
                     ),
                     Gap(AppLayout.getHeight(12)),
                     Column(
@@ -143,7 +143,7 @@ class ProfileScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "You\'v got a new award",
+                          "You'v got a new award",
                           style: Styles.headLineStyle2.copyWith(
                             fontWeight: FontWeight.bold, color: Colors.white
                           ),
@@ -257,6 +257,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(25)),
           InkWell(
+            // ignore: avoid_print
             onTap: () => print("You are tapped"),
             child: Center(
               child: Text(
